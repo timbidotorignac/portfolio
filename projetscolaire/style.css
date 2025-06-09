@@ -1,0 +1,198 @@
+/* ===== Style Global ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  line-height: 1.8;
+}
+
+header {
+  background: linear-gradient(to right, #1c1c2b, #2d2350);
+  padding: 60px 20px 30px 20px;
+  text-align: center;
+  border-bottom: 3px solid #a788ff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+  color: #b499ff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.projects-school {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.intro {
+  background-color: #18182b;
+  padding: 20px 30px;
+  border-left: 6px solid #a788ff;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.intro h2 {
+  color: #cdbaff;
+}
+
+.project-card {
+  background-color: #1b1b2e;
+  padding: 25px;
+  width: calc(25% - 20px);
+  min-width: 250px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(167, 136, 255, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background-color: #292947;
+}
+
+.project-card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-card h3 a:hover {
+  color: #b499ff;
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.project-card p {
+  font-size: 14px;
+  margin: 0;
+  color: #ddd;
+}
+
+.competences {
+  background-color: #18182b;
+  padding: 20px 30px;
+  border-left: 6px solid #a788ff;
+  border-radius: 8px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.competences h3 {
+  color: #cdbaff;
+}
+
+.competences ul {
+  padding-left: 20px;
+}
+
+.competences ul li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* ===== Pied de page (footer) corrigé ===== */
+.page-footer {
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #181828;
+  border-top: 2px solid #a788ff;
+  margin-top: 60px;
+}
+
+.footer-left-button,
+.footer-right-button {
+  background-color: #a788ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  min-width: 160px;
+  text-align: center;
+}
+
+.footer-left-button:hover,
+.footer-right-button:hover {
+  background-color: #cdbaff;
+  color: #000;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .project-card {
+    width: calc(50% - 20px);
+  }
+
+  .footer-left-button,
+  .footer-right-button {
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-school {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .project-card h3 {
+    font-size: 20px;
+  }
+
+  .project-card p,
+  .competences ul li {
+    font-size: 14px;
+  }
+}

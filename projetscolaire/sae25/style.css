@@ -1,0 +1,134 @@
+/* ===== Base ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  line-height: 1.8;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(to right, #1c1c2b, #2d2350);
+  padding: 50px 20px 30px 20px;
+  text-align: center;
+  border-bottom: 3px solid #a788ff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 32px;
+  color: #b499ff;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* ===== Container ===== */
+.sae-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===== Sections ===== */
+.intro, .details, .resultats, .preuves {
+  background-color: #18182b;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-left: 6px solid #a788ff;
+  border-radius: 8px;
+}
+
+.intro h2, .details h2, .resultats h2, .preuves h2 {
+  color: #cdbaff;
+  margin-top: 0;
+}
+
+/* ===== Paragraphes & listes ===== */
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* ===== Liens PDF / externes ===== */
+.pdf-link {
+  display: inline-block;
+  color: #b499ff;
+  background-color: #2b2b44;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin: 8px 0;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.pdf-link:hover {
+  background-color: #3f3f63;
+  color: #ffffff;
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #181828;
+  border-top: 2px solid #a788ff;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.footer-left-button,
+.footer-right-button {
+  background-color: #a788ff;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.footer-left-button:hover,
+.footer-right-button:hover {
+  background-color: #cdbaff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  .sae-container {
+    padding: 0 10px;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .footer-left-button,
+  .footer-right-button {
+    width: 100%;
+    text-align: center;
+  }
+}
