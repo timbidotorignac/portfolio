@@ -1,0 +1,110 @@
+/* ==== Base ==== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  color: #cdbaff;
+}
+
+/* ==== Header ==== */
+header {
+  background: linear-gradient(to right, #1e1e30, #322e56);
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #a788ff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* ==== Main Layout ==== */
+.sae-container {
+  padding: 40px 10%;
+}
+
+.intro, .details, .preuves {
+  background-color: #1a1a2d;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-left: 4px solid #a788ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(167, 136, 255, 0.1);
+}
+
+.details h2,
+.intro h2,
+.preuves h2 {
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* ==== Links ==== */
+a {
+  color: #b499ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==== Footer Buttons ==== */
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #161625;
+  padding: 20px 10%;
+  border-top: 2px solid #a788ff;
+  margin-top: 40px;
+}
+
+.footer-left-button,
+.footer-right-button {
+  background-color: #a788ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.footer-left-button:hover,
+.footer-right-button:hover {
+  background-color: #cbb6ff;
+  color: #000;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .page-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .sae-container {
+    padding: 30px 5%;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+}

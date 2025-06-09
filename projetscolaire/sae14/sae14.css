@@ -1,0 +1,168 @@
+/* ===== Base ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  line-height: 1.7;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(to right, #1c1c2b, #2d2350);
+  padding: 50px 20px 30px 20px;
+  text-align: center;
+  border-bottom: 3px solid #a788ff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 32px;
+  color: #b499ff;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Container principal ===== */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===== Sections ===== */
+.intro, .sae-part, .competences {
+  background-color: #18182b;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-left: 6px solid #a788ff;
+  border-radius: 8px;
+}
+
+.intro h2, .sae-part h3, .competences h3 {
+  color: #cdbaff;
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* ===== Liens vers PDF ===== */
+.pdf-link {
+  display: inline-block;
+  color: #b499ff;
+  background-color: #262640;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin: 8px 0;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.pdf-link:hover {
+  background-color: #3d3d66;
+  color: #fff;
+}
+
+/* ===== Image (réduite par 2) ===== */
+.img-block {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.img-block img {
+  width: auto;
+  max-width: 100%;
+  max-height: 300px; /* réduit par 2 (au lieu de 600px) */
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(167, 136, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.img-block img:hover {
+  transform: scale(1.03);
+}
+
+.caption {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ===== Compétences ===== */
+.competences ul {
+  padding-left: 20px;
+}
+
+.competences ul li {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+/* ===== Pied de page ===== */
+.page-footer {
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #181828;
+  border-top: 2px solid #a788ff;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.page-footer a {
+  background-color: #a788ff;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: inline-block;
+}
+
+.page-footer a:hover {
+  background-color: #cdbaff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .intro, .sae-part, .competences {
+    padding: 20px;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-footer a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .img-block img {
+    max-height: 200px;
+  }
+}
