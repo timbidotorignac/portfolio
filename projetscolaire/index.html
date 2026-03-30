@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets universitaires — Tim Bidot‑Orignac</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      const saved = sessionStorage.getItem('theme');
+      const startTheme = saved || 'day';
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.dataset.theme = startTheme;
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="binary-wall" aria-hidden="true">
+    <div class="binary-line">0010011101100101101001100101010010100100101101100101101001100</div>
+    <div class="binary-line">111110011100010110010111100111000101100101111001110001011001</div>
+    <div class="binary-line">000110010111010100110101000011001011101010011010100001100101</div>
+    <div class="binary-line">111110001100000111000111111000110000011100011111100011000001</div>
+    <div class="binary-line">000000011111101111000000001111110111100000000111111011110000</div>
+  </div>
+
+  <header class="page-header">
+    <div class="header-left">
+      <h1 class="code-title"><span class="bracket">&lt;</span>PROJETS_UNIVERSITAIRES<span class="bracket">/&gt;</span></h1>
+      <p class="subtitle">, TP et livrables — réseaux • télécoms • cybersécurité • systèmes • web</p>
+    </div>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+      <span class="icon-sun" aria-hidden="true">☀️</span>
+      <span class="icon-moon" aria-hidden="true">🌙</span>
+    </button>
+  </header>
+
+  <main class="wrapper">
+    <section class="intro">
+      <h2>Organisation</h2>
+      <p>
+        Cette page regroupe mes <strong>projets universitaires</strong> (principalement des ) et quelques
+        <strong>mini‑projets</strong> (TP / compte‑rendus) issus des mêmes enseignements.
+      </p>
+      <p class="muted">
+        Astuce : utilisez les filtres pour afficher uniquement les projets “Réseaux”, “Télécommunications”, etc.
+      </p>
+    </section>
+
+    <section class="controls" aria-label="Filtres et tri">
+      <div class="control-block">
+        <div class="control-label">Domaine</div>
+        <div class="filter-buttons" role="group" aria-label="Filtrer par domaine">
+          <button class="filter-btn active" data-domain="all" type="button">Tous</button>
+          <button class="filter-btn" data-domain="Réseaux" type="button">Réseaux</button>
+          <button class="filter-btn" data-domain="Télécommunications" type="button">Télécommunications</button>
+          <button class="filter-btn" data-domain="Cybersécurité" type="button">Cybersécurité</button>
+          <button class="filter-btn" data-domain="Communication / web" type="button">Communication / web</button>
+          <button class="filter-btn" data-domain="Développement & données" type="button">Développement &amp; données</button>
+        </div>
+      </div>
+
+      <div class="control-row">
+        <div class="control-block">
+          <label class="control-label" for="typeSelect">Type</label>
+          <select id="typeSelect" class="control-input">
+            <option value="all">Tous</option>
+            <option value=""></option>
+            <option value="Mini-projet">Mini‑projet</option>
+          </select>
+        </div>
+
+        <div class="control-block">
+          <label class="control-label" for="sortSelect">Tri</label>
+          <select id="sortSelect" class="control-input">
+            <option value="featured">Recommandé</option>
+            <option value="az">Nom (A → Z)</option>
+            <option value="domain">Domaine</option>
+            <option value="type">Type</option>
+          </select>
+        </div>
+
+        <div class="control-block control-search">
+          <label class="control-label" for="searchInput">Recherche</label>
+          <input id="searchInput" class="control-input" type="search" placeholder="ex : VLAN, transmission, Python…" />
+        </div>
+      </div>
+    </section>
+
+    <p class="results" id="resultsCount" aria-live="polite"></p>
+
+    <section class="grid" id="projectsGrid" aria-label="Liste des projets"></section>
+
+    <section class="skills-summary" aria-label="Compétences mobilisées">
+      <h2>Compétences mobilisées</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Réseaux</h3>
+          <ul>
+            <li>Adressage IP, VLAN, topologies, validation</li>
+            <li>Services réseau (notions : DHCP/DNS selon projets)</li>
+            <li>Analyse de trafic (capturer / observer)</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h3>Cybersécurité</h3>
+          <ul>
+            <li>Tests applicatifs en lab (Burp Suite / OWASP ZAP)</li>
+            <li>Reconnaissance &amp; cartographie en environnement contrôlé</li>
+            <li>Restitution : constats, impacts, recommandations</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h3>Télécommunications</h3>
+          <ul>
+            <li>Notions de transmission et étude de dispositifs</li>
+            <li>TP / compte‑rendus et exploitation de mesures</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h3>Développement &amp; data</h3>
+          <ul>
+            <li>Web : HTML/CSS, structuration de pages</li>
+            <li>Python : scripts, manipulation et analyse (selon projets)</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h3>Méthode</h3>
+          <ul>
+            <li>Travail en équipe, organisation, livrables</li>
+            <li>Rédaction et restitution (PDF, slides)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <a href="../index.html#projets" class="footer-left-button">↩ Retour aux sections du portfolio</a>
+    <a href="../projetpersonnels/index.html" class="footer-right-button">📁 Voir les projets personnels</a>
+  </footer>
+
+  <!-- Lightbox (photos) -->
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" data-close="1"></div>
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Aperçu de l’image">
+      <button class="lightbox-close" type="button" data-close="1" aria-label="Fermer">✕</button>
+      <img id="lightboxImg" alt="" />
+      <p id="lightboxCaption" class="muted"></p>
+    </div>
+  </div>
+
+  <script>
+    // Thème
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+      const cur = document.documentElement.dataset.theme === 'night' ? 'day' : 'night';
+      document.documentElement.dataset.theme = cur;
+      sessionStorage.setItem('theme', cur);
+    });
+
+    // Données projets (basées sur les fichiers présents dans ce dépôt)
+    const projects = [
+      {
+        id: "sae21",
+        type: "Projet",
+        domain: "Réseaux",
+        title: "Construire un réseau pour une structure",
+        href: "sae21/index.html",
+        cover: "sae21.png",
+        description: "Conception d’un réseau local (adressage, topologie, sécurité) et livrables associés.",
+        tags: ["VLAN", "DHCP/DNS", "Sécurité"],
+        gallery: []
+      },
+      {
+        id: "sae12",
+        type: "Projet",
+        domain: "Réseaux",
+        title: "S’initier aux réseaux informatiques",
+        href: "sae12/index.html",
+        cover: "sae12.jpeg",
+        description: "Conception et simulation d’un réseau simple avec Packet Tracer, adressage et configuration de base.",
+        tags: ["Adressage", "Packet Tracer", "Modélisation"],
+        gallery: [
+          { src: "sae12/monreseau.png", alt: "Schéma / réseau (SAE12)" },
+          { src: "sae12/sae12.jpeg", alt: "Illustration (SAE12)" }
+        ]
+      },
+      {
+        id: "sae13",
+        type: "Projet",
+        domain: "Télécommunications",
+        title: "Analyse d’un dispositif de transmission",
+        href: "sae13/index.html",
+        cover: "sae13.png",
+        description: "Étude et caractérisation de signaux analogiques et numériques, avec comptes‑rendus et supports.",
+        tags: ["Signaux", "Mesures", "Transmission"],
+        gallery: [
+          { src: "sae13/a.jpg", alt: "Illustration (SAE13)" },
+          { src: "sae13/b.jpg", alt: "Illustration (SAE13)" },
+          { src: "sae13/e.png", alt: "Schéma / capture (SAE13)" }
+        ]
+      },
+      {
+        id: "sae14",
+        type: "Projet",
+        domain: "Communication / web",
+        title: "Se présenter sur Internet",
+        href: "sae14/index.html",
+        cover: "sae14.png",
+        description: "Atelier autour de l’e‑réputation avec supports interactifs et restitution.",
+        tags: ["Communication", "Vulgarisation", "Supports"],
+        gallery: [
+          { src: "sae14/a.jpg", alt: "Support / visuel (SAE14)" }
+        ]
+      },
+      {
+        id: "sae15",
+        type: "Projet",
+        domain: "Développement & données",
+        title: "Banc avionique",
+        href: "sae15/index.html",
+        cover: "sae15.png",
+        description: "Exploitation de données avec Python (extraction, manipulation) et livrables associés.",
+        tags: ["Python", "CSV", "Analyse"],
+        gallery: []
+      },
+      {
+        id: "sae25",
+        type: "Projet",
+        domain: "Communication / web",
+        title: "Portfolio de compétences",
+        href: "sae25/index.html",
+        cover: "sae25.png",
+        description: "Synthèse des compétences acquises via un portfolio web et des documents associés.",
+        tags: ["Portfolio", "Web", "Synthèse"],
+        gallery: [
+          { src: "sae25/a.png", alt: "Aperçu (SAE25)" }
+        ]
+      },
+
+      // 4 mini‑projets universitaires (TP / compte‑rendus) — basés sur fichiers existants
+      {
+        id: "mini-sae12-cr1",
+        type: "TP",
+        domain: "Réseaux",
+        title: "TP Réseau — Compte‑rendu",
+        href: "tp-reseau-compte-rendu/index.html",
+        cover: "sae12/monreseau.png",
+        description: "Compte‑rendu PDF lié au travail de la  12 (réseau / configuration).",
+        tags: ["PDF", "Compte‑rendu", "Réseaux"],
+        gallery: [
+          { src: "sae12/monreseau.png", alt: "Schéma / réseau (SAE12)" }
+        ]
+      },
+      {
+        id: "mini-sae13-tp1",
+        type: "TP",
+        domain: "Télécommunications",
+        title: "TP Transmission — TP1",
+        href: "tp-transmission-tp1/index.html",
+        cover: "sae13/a.jpg",
+        description: "TP (PDF) issu de la  13 : transmission / mesures / analyse.",
+        tags: ["TP", "PDF", "Transmission"],
+        gallery: [
+          { src: "sae13/a.jpg", alt: "Illustration (SAE13)" },
+          { src: "sae13/b.jpg", alt: "Illustration (SAE13)" },
+          { src: "sae13/e.png", alt: "Schéma / capture (SAE13)" }
+        ]
+      },
+      {
+        id: "mini-sae13-tp2",
+        type: "TP",
+        domain: "Télécommunications",
+        title: "TP Transmission — TP2",
+        href: "tp-transmission-tp2/index.html",
+        cover: "sae13/b.jpg",
+        description: "TP (PDF) issu de la  13 : transmission / mesures / analyse.",
+        tags: ["TP", "PDF", "Transmission"],
+        gallery: [
+          { src: "sae13/b.jpg", alt: "Illustration (SAE13)" },
+          { src: "sae13/e.png", alt: "Schéma / capture (SAE13)" }
+        ]
+      },
+      {
+        id: "mini-sae13-tp3",
+        type: "TP",
+        domain: "Télécommunications",
+        title: "TP Transmission — TP3",
+        href: "tp-transmission-tp3/index.html",
+        cover: "sae13/e.png",
+        description: "TP (PDF) issu de la  13 : transmission / mesures / analyse.",
+        tags: ["TP", "PDF", "Transmission"],
+        gallery: [
+          { src: "sae13/e.png", alt: "Schéma / capture (SAE13)" },
+          { src: "sae13/a.jpg", alt: "Illustration (SAE13)" }
+        ]
+      },
+      {
+        id: "sae31-transmissions",
+        type: "Projet",
+        domain: "Télécommunications",
+        title: "Diffusion TV : DVB‑S / DVB‑T",
+        href: "projet-dvb/index.html",
+        cover: "pdf/sae31-transmissions-dvb-thumb.png",
+        description: "Étude théorique et pratique des systèmes de diffusion TV par satellite et faisceau hertzien, avec mesures et compte‑rendu.",
+        tags: ["DVB‑S", "DVB‑T", "OFDM", "Mesures"],
+        gallery: []
+      },
+      {
+        id: "sae31-fluxmedia",
+        type: "TP",
+        domain: "Télécommunications",
+        title: "Flux média &amp; transmission — GStreamer",
+        href: "tp-fluxmedia/index.html",
+        cover: "pdf/sae31-fluxmedia-gstreamer-thumb.png",
+        description: "Compte‑rendu de séance (PDF) autour d’un projet de transmission/flux média (TP &amp; restitution).",
+        tags: ["TP", "Compte‑rendu", "Transmission"],
+        gallery: []
+      },
+      {
+        id: "sae304-pentest",
+        type: "Projet",
+        domain: "Cybersécurité",
+        title: "Pentest d’une infrastructure pédagogique",
+        href: "projet-pentest/index.html",
+        cover: "pdf/sae304-rapport-pentest-thumb.png",
+        description: "Rédaction d’un rapport de test d’intrusion en contexte pédagogique (cadre autorisé) : constats, impacts, et recommandations.",
+        tags: ["Pentest", "Rapport", "Remédiation"],
+        gallery: []
+      }
+
+    ];
+
+    const domainButtons = Array.from(document.querySelectorAll('.filter-btn'));
+    const typeSelect = document.getElementById('typeSelect');
+    const sortSelect = document.getElementById('sortSelect');
+    const searchInput = document.getElementById('searchInput');
+    const grid = document.getElementById('projectsGrid');
+    const results = document.getElementById('resultsCount');
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+
+    let state = { domain: 'all', type: 'all', sort: 'featured', q: '' };
+
+    function normalize(s) {
+      return (s || '').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function applyFilters() {
+      const q = normalize(state.q.trim());
+      let list = projects.filter(p => {
+        const domainOk = state.domain === 'all' || p.domain === state.domain;
+        const typeOk = state.type === 'all' || p.type === state.type;
+        if (!domainOk || !typeOk) return false;
+        if (!q) return true;
+
+        const blob = [
+          p.title, p.description, p.domain, p.type, ...(p.tags || [])
+        ].map(normalize).join(' ');
+        return blob.includes(q);
+      });
+
+      if (state.sort === 'az') {
+        list.sort((a, b) => a.title.localeCompare(b.title, 'fr'));
+      } else if (state.sort === 'domain') {
+        list.sort((a, b) => (a.domain + a.title).localeCompare(b.domain + b.title, 'fr'));
+      } else if (state.sort === 'type') {
+        list.sort((a, b) => (a.type + a.title).localeCompare(b.type + b.title, 'fr'));
+      } else {
+        // featured:  d'abord, puis mini‑projets (ordre stable)
+        list.sort((a, b) => (a.type === b.type ? 0 : (a.type === '' ? -1 : 1)));
+      }
+
+      render(list);
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, s => ({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+      }[s]));
+    }
+
+    function render(list) {
+      results.textContent = `${list.length} projet(s) affiché(s)`;
+
+      grid.innerHTML = list.map(p => {
+        const tags = (p.tags || []).slice(0, 4).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
+        const thumbs = (p.gallery || []).slice(0, 3).map((g, i) => `
+          <button class="thumb" type="button" data-img="${escapeHtml(g.src)}" data-cap="${escapeHtml(g.alt || p.title)}" aria-label="Voir photo">
+            <img src="${escapeHtml(g.src)}" alt="${escapeHtml(g.alt || '')}" loading="lazy" />
+          </button>
+        `).join('');
+
+        const hasThumbs = thumbs.trim().length > 0;
+        const badge = ``;
+
+        return `
+          <article class="card">
+            <a class="card-cover" href="${escapeHtml(p.href)}" target="${p.href.endsWith('.pdf') ? '_blank' : '_self'}" rel="noopener">
+              <img src="${escapeHtml(p.cover)}" alt="${escapeHtml(p.title)}" loading="lazy" />
+              <div class="card-meta">
+<span class="domain">${escapeHtml(p.domain)}</span>
+              </div>
+            </a>
+
+            <div class="card-body">
+              <h3 class="card-title">
+                <a href="${escapeHtml(p.href)}" target="${p.href.endsWith('.pdf') ? '_blank' : '_self'}" rel="noopener">${escapeHtml(p.title)}</a>
+              </h3>
+              <p class="card-desc">${escapeHtml(p.description)}</p>
+
+              <div class="tags">${tags}</div>
+
+              ${hasThumbs ? `<div class="thumbs" aria-label="Aperçu photos">${thumbs}</div>` : ''}
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      // Bind lightbox on thumbs
+      grid.querySelectorAll('.thumb').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const src = btn.getAttribute('data-img');
+          const cap = btn.getAttribute('data-cap') || '';
+          openLightbox(src, cap);
+        });
+      });
+    }
+
+    function openLightbox(src, cap) {
+      lightboxImg.src = src;
+      lightboxImg.alt = cap || 'Aperçu';
+      lightboxCaption.textContent = cap || '';
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target && e.target.dataset && e.target.dataset.close) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+    });
+
+    domainButtons.forEach(b => {
+      b.addEventListener('click', () => {
+        domainButtons.forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        state.domain = b.dataset.domain || 'all';
+        applyFilters();
+      });
+    });
+
+    typeSelect.addEventListener('change', () => {
+      state.type = typeSelect.value;
+      applyFilters();
+    });
+
+    sortSelect.addEventListener('change', () => {
+      state.sort = sortSelect.value;
+      applyFilters();
+    });
+
+    searchInput.addEventListener('input', () => {
+      state.q = searchInput.value;
+      applyFilters();
+    });
+
+    applyFilters();
+  </script>
+
+
+  <script>
+  (function () {
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', () => {
+      const cur = (document.documentElement.dataset.theme === 'night') ? 'day' : 'night';
+      document.documentElement.dataset.theme = cur;
+      sessionStorage.setItem('theme', cur);
+    });
+  })();
+</script>
+</body>
+</html>
