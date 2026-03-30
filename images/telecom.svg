@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Télécommunications">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="108" height="108" rx="20" fill="url(#g)" opacity="0.12"/>
+  <g fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round">
+    <path d="M64 96V52"/>
+    <path d="M50 96h28"/>
+    <path d="M64 40a6 6 0 1 0 0.01 0"/>
+    <path d="M44 56c6-8 13-12 20-12s14 4 20 12"/>
+    <path d="M32 44c10-12 20-18 32-18s22 6 32 18"/>
+  </g>
+</svg>

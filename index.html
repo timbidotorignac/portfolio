@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Portfolio — Tim Bidot‑Orignac</title>
+  <link rel="stylesheet" href="style.css?v=20260330t" />
+  <script>
+    // Détermination du thème au premier chargement
+    (function () {
+      const saved = sessionStorage.getItem('theme');
+      const startTheme = saved || 'day';
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.dataset.theme = startTheme;
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Décor binaire (inspiration style "Franso") -->
+  <div class="binary-wall" aria-hidden="true">
+    <div class="binary-line">0010011101100101101001100101010010100100101101100101101001100</div>
+    <div class="binary-line">111110011100010110010111100111000101100101111001110001011001</div>
+    <div class="binary-line">000110010111010100110101000011001011101010011010100001100101</div>
+    <div class="binary-line">111110001100000111000111111000110000011100011111100011000001</div>
+    <div class="binary-line">000000011111101111000000001111110111100000000111111011110000</div>
+  </div>
+
+  <!-- En-tête -->
+  <header>
+    <div class="header-left" aria-label="Identité">
+      <span class="header-name">Tim Bidot‑Orignac</span>
+      <span class="header-label">Portfolio</span>
+    </div>
+
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Bascule thème -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème" title="Basculer le thème (Jour/Nuit)">
+      <span class="icon-sun" aria-hidden="true">☀️</span>
+      <span class="icon-moon" aria-hidden="true">🌙</span>
+    </button>
+  </header>
+
+  <!-- Accueil -->
+  <section id="accueil" class="hero hero-left-photo hero-franso">
+    <div class="hero-text align-left">
+      <p class="hero-kicker">Portfolio technique</p>
+
+      <h1 class="code-hero">
+        <span class="bracket">&lt;</span><span class="hero-name-inline">Tim Bidot‑Orignac</span><span class="bracket">/&gt;</span>
+      </h1>
+
+      <p class="hero-badge">BUT 2 Réseaux et Télécommunications — IUT Nice Sophia Antipolis</p>
+
+      <h2 class="subtitle">Passionné par la cybersécurité, avec une approche rigoureuse des réseaux et des télécoms.</h2>
+
+      <p class="description">
+        Je construis ce portfolio comme une démonstration de rigueur technique : analyser un besoin, choisir une méthode adaptée,
+        exécuter proprement, vérifier le résultat puis produire une restitution exploitable. Les travaux présentés réunissent des projets
+        universitaires, des exercices personnels et des supports rédigés pour montrer une progression réelle.
+      </p>
+
+      <div class="chips" aria-label="Centres d’intérêt">
+        <span class="chip">Réseaux IP &amp; segmentation</span>
+        <span class="chip">Analyse de trafic</span>
+        <span class="chip">Sécurité web en laboratoire</span>
+        <span class="chip">Documentation technique</span>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#projets" class="cta-button">Voir les projets</a>
+        <a href="#contact" class="cta-button cta-ghost">Me contacter</a>
+      </div>
+
+      <ul class="hero-proof-list" aria-label="Repères du portfolio">
+        <li>Un parcours de lecture clair entre formation, projets universitaires et travaux personnels</li>
+        <li>Des projets détaillés avec contexte, méthode, outils et résultat</li>
+        <li>Des preuves visuelles et documentaires pour appuyer chaque démonstration</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" aria-label="Photo de profil">
+      <div class="hero-avatar-wrapper large" aria-label="Photo">
+        <div class="avatar-blob" aria-hidden="true"></div>
+        <img
+          src="photo/vacances.jpg"
+          alt="Photo de Tim Bidot‑Orignac"
+          class="avatar-photo large"
+          onerror="this.onerror=null;this.src='photo/moi1.jpg';"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="bridge-section" aria-label="Présentation du profil">
+    <div class="section-heading">
+      <p class="section-kicker">Présentation</p>
+      <h2>Un profil orienté cybersécurité, avec une forte exigence sur la méthode et la qualité d’exécution.</h2>
+      <p class="section-lead">
+        Je m’intéresse particulièrement aux sujets de cybersécurité où il faut observer, tester, corriger puis formaliser clairement ce qui a été fait.
+        C’est pour cette raison que les projets personnels sont accompagnés de preuves visuelles, de schémas et de fiches de synthèse.
+      </p>
+    </div>
+
+    <div class="bridge-grid">
+      <article class="bridge-card">
+        <h3>Mon approche</h3>
+        <p>Je cherche d’abord à comprendre le contexte, les contraintes et le risque avant de choisir les outils ou les actions à mener.</p>
+      </article>
+
+      <article class="bridge-card">
+        <h3>Ce que montrent les projets</h3>
+        <p>Les pages projets ne présentent pas seulement un résultat final. Elles montrent aussi la logique, les étapes suivies et la façon de restituer.</p>
+      </article>
+
+      <article class="bridge-card">
+        <h3>Pourquoi les supports comptent</h3>
+        <p>Les captures, photos, schémas et PDF servent à rendre le travail concret et à éviter des descriptions trop vagues ou génériques.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <section id="projets" class="projects-section">
+    <div class="section-heading section-heading-centered">
+      <p class="section-kicker">Navigation</p>
+      <h2 class="code-title"><span class="bracket">&lt;</span>PROJETS<span class="bracket">/&gt;</span></h2>
+      <p class="section-lead">
+        Le portfolio est organisé en trois blocs pour permettre une lecture simple : d’abord le parcours, ensuite les projets universitaires,
+        puis les projets personnels avec davantage de détails, de preuves et de supports explicatifs.
+      </p>
+    </div>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+        <a href="monparcours/index.html" class="card-link">
+          <h3>Parcours académique</h3>
+          <img src="photo/1.JPG" alt="Aperçu du parcours académique" class="project-image" />
+          <p class="project-description">
+            Les étapes du cursus, les compétences consolidées et les domaines techniques qui structurent aujourd’hui mon profil.
+          </p>
+          <div class="card-tags">
+            <span class="tag">Formation</span>
+            <span class="tag">Parcours</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="projetscolaire/index.html" class="card-link">
+          <h3>Projets universitaires</h3>
+          <img src="photo/2.jpg" alt="Aperçu des projets universitaires" class="project-image" />
+          <p class="project-description">
+            Une sélection de SAÉ, TP et livrables qui montrent la mise en pratique, les tests réalisés et la capacité à documenter le travail.
+          </p>
+          <div class="card-tags">
+            <span class="tag">Réseaux</span>
+            <span class="tag">Télécoms</span>
+            <span class="tag">Web</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="projetpersonnels/index.html" class="card-link">
+          <h3>Projets personnels</h3>
+          <img src="photo/3.jpg" alt="Aperçu des projets personnels" class="project-image" />
+          <p class="project-description">
+            Des projets menés en autonomie pour approfondir l’analyse, l’automatisation, la sécurité et la restitution via fiches PDF et schémas.
+          </p>
+          <div class="card-tags">
+            <span class="tag">Laboratoire</span>
+            <span class="tag">Scripts</span>
+            <span class="tag">PDF</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="soft-skills-section" aria-label="Qualités de travail">
+    <div class="section-heading">
+      <p class="section-kicker">Qualités de travail</p>
+      <h2>Des qualités utiles pour des projets techniques concrets.</h2>
+      <p class="section-lead">
+        Au-delà des outils, je cherche à travailler de manière claire, structurée et fiable. Cette posture se retrouve autant dans les rendus que dans l’organisation des projets.
+      </p>
+    </div>
+
+    <div class="soft-skills-grid">
+      <article class="soft-skill-card">
+        <h3>Rigueur</h3>
+        <p>Je prends le temps de vérifier ce qui est fait, de structurer les livrables et de distinguer clairement hypothèses, actions et résultats.</p>
+      </article>
+
+      <article class="soft-skill-card">
+        <h3>Autonomie</h3>
+        <p>Je suis à l’aise pour avancer seul sur un sujet, chercher la bonne information et produire un rendu exploitable sans rester au stade de l’idée.</p>
+      </article>
+
+      <article class="soft-skill-card">
+        <h3>Esprit d’analyse</h3>
+        <p>J’aime comprendre pourquoi une configuration fonctionne, pourquoi un flux échoue ou pourquoi un contrôle de sécurité est utile.</p>
+      </article>
+
+      <article class="soft-skill-card">
+        <h3>Travail en équipe</h3>
+        <p>Les projets universitaires m’ont appris à répartir les tâches, à garder une base commune propre et à restituer collectivement un travail technique.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section id="competences" class="skills-section tiles">
+    <h2 class="code-title"><span class="bracket">&lt;</span>COMPÉTENCES<span class="bracket">/&gt;</span></h2>
+
+    <div class="skills-categories">
+
+      <div class="skills-category">
+        <h3>Cybersécurité</h3>
+        <p class="muted">
+          Compétences et outils utilisés dans un cadre <strong>autorisé</strong> : TP, labs, environnements de formation et CTF.
+        </p>
+
+        <div class="skills-tiles-grid">
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/burp.svg" alt="Burp Suite"></div>
+            <h4>Burp Suite</h4>
+            <p>Proxy, Repeater, Intruder, analyse et tests applicatifs (labs).</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/zap.svg" alt="OWASP ZAP"></div>
+            <h4>OWASP ZAP</h4>
+            <p>Analyse dynamique, exploration, repérage de points d’entrée.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/nmap.png" alt="Nmap"></div>
+            <h4>Nmap</h4>
+            <p>Découverte d’hôtes/services et cartographie (environnements contrôlés).</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/wireshark.png" alt="Wireshark"></div>
+            <h4>Wireshark</h4>
+            <p>Capture, inspection et compréhension de flux réseau.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/maltego.svg" alt="Maltego"></div>
+            <h4>Maltego</h4>
+            <p>OSINT et cartographie de relations (notions / prise en main).</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/shield.svg" alt="Sécurité web"></div>
+            <h4>Sécurité web</h4>
+            <p>OWASP Top 10 (bases), compréhension des risques &amp; contre‑mesures.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/kali.svg" alt="Kali Linux"></div>
+            <h4>Kali Linux</h4>
+            <p>Environnement de lab : VM, outillage et méthodologie en contexte autorisé.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/metasploit.svg" alt="Metasploit"></div>
+            <h4>Metasploit (bases)</h4>
+            <p>Framework de validation en lab : compréhension des vecteurs et impacts, restitution &amp; remédiation.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/netcat.svg" alt="Netcat"></div>
+            <h4>Netcat</h4>
+            <p>Tests de connectivité TCP/UDP, échanges simples et diagnostic réseau (labs).</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/hydra.svg" alt="Hydra"></div>
+            <h4>Hydra</h4>
+            <p>Tests de robustesse d’authentification et évaluation des protections (cadre autorisé).</p>
+          </article>
+        </div>
+<div class="claim-box">
+          <h4>SQL injection (Web)</h4>
+          <p>
+            Parcours de formation sur l’injection SQL :
+            <a href="https://portswigger.net/web-security/sql-injection" target="_blank" rel="noopener noreferrer">Web Security Academy (PortSwigger) — SQL injection</a>
+            (labs en environnement de formation avec Burp Suite). Focus : compréhension des risques, validation des entrées, requêtes paramétrées et contrôles de régression.
+          </p>
+          <p class="muted">
+            Référence : PortSwigger — SQL injection &amp; accès aux labs.
+          </p>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Réseaux</h3>
+        <div class="skills-tiles-grid">
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/cisco.png" alt="Cisco"></div>
+            <h4>Cisco (bases)</h4>
+            <p>VLAN, adressage, routage de base, segmentation.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/packettracer.png" alt="Cisco Packet Tracer"></div>
+            <h4>Packet Tracer</h4>
+            <p>Topologies, tests, simulation et validation.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/wireshark.png" alt="Wireshark"></div>
+            <h4>Wireshark</h4>
+            <p>Capture et analyse de trafic réseau.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/nmap.png" alt="Nmap"></div>
+            <h4>Nmap</h4>
+            <p>Découverte d’hôtes/services et cartographie basique.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Télécommunications</h3>
+        <div class="skills-tiles-grid">
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/telecom.svg" alt="Télécommunications"></div>
+            <h4>Transmission (notions)</h4>
+            <p>Notions de signaux, supports et mécanismes de transmission.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/telecom-qos.svg" alt="Qualité de service"></div>
+            <h4>QoS (introduction)</h4>
+            <p>Latence, gigue, priorisation et continuité de service.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Systèmes</h3>
+        <div class="skills-tiles-grid">
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/linux.png" alt="Linux"></div>
+            <h4>Linux/Unix</h4>
+            <p>Administration basique, scripts Bash, services.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Développement &amp; données</h3>
+        <div class="skills-tiles-grid">
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/html5.png" alt="HTML5"></div>
+            <h4>HTML5</h4>
+            <p>Structure sémantique, accessibilité, responsive.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/css3.png" alt="CSS3"></div>
+            <h4>CSS3</h4>
+            <p>Flex/Grid, animations, variables CSS.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/js.png" alt="JavaScript"></div>
+            <h4>JavaScript</h4>
+            <p>DOM, interactivité, logique front.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/php.png" alt="PHP"></div>
+            <h4>PHP</h4>
+            <p>Back‑end simple pour interfaces dynamiques.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/python.png" alt="Python"></div>
+            <h4>Python</h4>
+            <p>Scripts et analyse de données.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/java.png" alt="Java"></div>
+            <h4>Java</h4>
+            <p>Notions orientées objet et outils.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/c.png" alt="C"></div>
+            <h4>C</h4>
+            <p>Notions bas niveau : types, pointeurs, compilation.</p>
+          </article>
+
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/mysql.png" alt="MySQL"></div>
+            <h4>MySQL</h4>
+            <p>Requêtes SQL, modélisation simple, gestion de données.</p>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Certifications -->
+  <section id="certifications" class="skills-section tiles">
+    <h2 class="code-title"><span class="bracket">&lt;</span>CERTIFICATIONS<span class="bracket">/&gt;</span></h2>
+
+    <div class="skills-categories">
+      <div class="skills-category">
+        <h3>Réseaux</h3>
+        <div class="skills-tiles-grid">
+          <article class="skill-tile">
+            <div class="skill-icon"><img src="images/diploma.svg" alt="Certification"></div>
+            <h4>CCNA 1 — Introduction to Networks (ITN)</h4>
+            <p>Cisco Networking Academy : fondamentaux réseau (adressage, switching, routage de base, bonnes pratiques).</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-dark">
+    <h2 class="code-title"><span class="bracket">&lt;</span>CONTACT<span class="bracket">/&gt;</span></h2>
+    <p>Pour toute demande ou échange professionnel, n'hésitez pas à me contacter :</p>
+    <p><strong>Email :</strong> <a href="mailto:tim.bidot--orignac@etu.univ-cotedazur.fr">tim.bidot--orignac@etu.univ-cotedazur.fr</a></p>
+    <p><strong>Téléphone :</strong> <span class="muted">sur demande</span></p>
+    <p><strong>Localisation :</strong> Nice</p>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="footer-left">Tim Bidot‑Orignac</div>
+    <div class="footer-right copyright">
+      © 2025 — Portfolio. Propulsé par GitHub Pages.
+    </div>
+  </footer>
+
+  <script src="script.js?v=20260330t"></script>
+  <script>
+    // Bascule jour/nuit + sauvegarde
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      const cur = document.documentElement.dataset.theme === 'night' ? 'day' : 'night';
+      document.documentElement.dataset.theme = cur;
+      sessionStorage.setItem('theme', cur);
+    });
+  </script>
+</body>
+</html>

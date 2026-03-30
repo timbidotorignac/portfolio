@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="OWASP ZAP">
+  <defs>
+    <linearGradient id="gzap" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#gzap)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 2L4 14h7l-1 8 10-12h-7l0-8z"/>
+  </g>
+</svg>

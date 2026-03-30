@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Sécurité">
+  <defs>
+    <linearGradient id="gshield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#gshield)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2l7 3v6c0 5-3 9-7 11C8 20 5 16 5 11V5l7-3z"/>
+    <path d="M9.5 12l1.7 1.7L14.8 10"/>
+  </g>
+</svg>

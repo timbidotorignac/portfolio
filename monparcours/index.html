@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parcours académique — Tim Bidot‑Orignac</title>
+  <link rel="stylesheet" href="style.css?v=20260330t" />
+  <script>
+    (function () {
+      const saved = sessionStorage.getItem('theme');
+      const startTheme = saved || 'day';
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.dataset.theme = startTheme;
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="binary-wall" aria-hidden="true">
+    <div class="binary-line">0010011101100101101001100101010010100100101101100101101001100</div>
+    <div class="binary-line">111110011100010110010111100111000101100101111001110001011001</div>
+    <div class="binary-line">000110010111010100110101000011001011101010011010100001100101</div>
+    <div class="binary-line">111110001100000111000111111000110000011100011111100011000001</div>
+    <div class="binary-line">000000011111101111000000001111110111100000000111111011110000</div>
+  </div>
+
+
+  <header class="page-header">
+    <div class="header-left">
+      <h1 class="code-title"><span class="bracket">&lt;</span>PARCOURS<span class="bracket">/&gt;</span></h1>
+      <p class="subtitle">BUT Réseaux &amp; Télécommunications — 2e année</p>
+    </div>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+      <span class="icon-sun" aria-hidden="true">☀️</span>
+      <span class="icon-moon" aria-hidden="true">🌙</span>
+    </button>
+  </header>
+
+  <main class="wrapper">
+
+    <section class="identity-card" aria-label="Présentation">
+      <div class="identity-left">
+        <div class="avatar">
+          <div class="avatar-blob" aria-hidden="true"></div>
+          <img
+            src="../photo/vacances.jpg"
+            alt="Photo de Tim Bidot‑Orignac"
+            onerror="this.onerror=null;this.src='../photo/moi1.jpg';"
+          />
+        </div>
+      </div>
+
+      <div class="identity-right">
+        <h2>Tim Bidot‑Orignac</h2>
+        <p class="lead">
+          Mon parcours met l’accent sur les <strong>infrastructures réseau</strong>, les <strong>télécommunications</strong> et
+          la <strong>mise en œuvre de solutions techniques</strong> (configuration, validation, documentation).
+        </p>
+
+        <div class="chips" aria-label="Axes">
+          <span class="chip">Réseaux</span>
+          <span class="chip">Télécoms</span>
+          <span class="chip">Systèmes (Linux)</span>
+          <span class="chip">Projets SAÉ</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline" aria-label="Timeline du parcours">
+
+      <article class="step">
+        <div class="step-icon" aria-hidden="true">
+          <img src="../images/network.svg" alt="" />
+        </div>
+        <div class="step-body">
+          <h3>BUT Réseaux &amp; Télécommunications — IUT de Nice Côte d’Azur <span class="muted">(en cours)</span></h3>
+          <p class="step-desc">
+            Formation orientée <strong>réseaux</strong>, <strong>télécoms</strong>, <strong>sécurité</strong> et
+            <strong>services</strong>. Mise en pratique via des SAÉ et des livrables techniques.
+          </p>
+          <ul>
+            <li>Réseaux IP : adressage, VLAN, routage de base, tests et validation.</li>
+            <li>Systèmes : administration Linux (commandes, services), scripts Bash.</li>
+            <li>Sécurité : segmentation, premières notions d’audit et d’analyse (ex : captures réseau).</li>
+            <li>Télécommunications : notions de transmission et compréhension des mécanismes.</li>
+            <li>Méthode : travail en équipe, documentation, restitution orale/écrite.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-icon" aria-hidden="true">
+          <img src="../images/engineering.svg" alt="" />
+        </div>
+        <div class="step-body">
+          <h3>ECE Paris — 1re année <span class="muted">(année d’exploration)</span></h3>
+          <p class="step-desc">
+            Renforcement des bases en <strong>programmation</strong>, <strong>mathématiques appliquées</strong> et
+            <strong>projets</strong>.
+          </p>
+          <ul>
+            <li>Fondamentaux de programmation : Python, C (bases).</li>
+            <li>Mathématiques appliquées : méthodes et raisonnement.</li>
+            <li>Électronique/embarqué et modélisation (initiation).</li>
+            <li>Projets en équipe : organisation, répartition des tâches, restitution.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-icon" aria-hidden="true">
+          <img src="../images/diploma.svg" alt="" />
+        </div>
+        <div class="step-body">
+          <h3>Baccalauréat STI2D — spécialité Énergies &amp; Environnement — Lycée Albert Camus, Fréjus</h3>
+          <p class="step-desc">
+            Formation technologique avec une approche <strong>systèmes</strong> et <strong>projet</strong>.
+          </p>
+          <ul>
+            <li>Analyse de systèmes automatisés et résolution de problèmes techniques.</li>
+            <li>Gestion/lecture de flux et principes énergétiques.</li>
+            <li>Utilisation d’outils de modélisation et de documentation technique.</li>
+            <li>Travail collaboratif : démarche projet, rédaction et présentation.</li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+
+    
+    <section class="internship" aria-label="Certifications">
+      <div class="internship-icon" aria-hidden="true">
+        <img src="../images/diploma.svg" alt="" />
+      </div>
+      <div class="internship-body">
+        <h3>Certifications</h3>
+        <p>
+          <strong>CCNA 1 — Introduction to Networks (ITN)</strong> (Cisco Networking Academy) :
+          fondamentaux réseau (adressage, switching, routage de base, bonnes pratiques).
+        </p>
+      </div>
+    </section>
+
+<section class="internship" aria-label="Positionnement actuel">
+      <div class="internship-icon" aria-hidden="true">
+        <img src="../images/internship.svg" alt="" />
+      </div>
+      <div class="internship-body">
+        <h3>Positionnement actuel</h3>
+        <p>
+          J’oriente mon parcours vers les <strong>réseaux</strong>, les <strong>télécommunications</strong>,
+          la <strong>cybersécurité</strong> et la <strong>documentation technique</strong>, avec une préférence
+          pour les sujets concrets qui demandent méthode et lisibilité.
+        </p>
+        <p class="muted">
+          Pour plus de détails : consultez la page <a href="../projetscolaire/index.html">Projets universitaires</a>
+          ou contactez‑moi depuis l’accueil.
+        </p>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="Aperçus">
+      <h3>Aperçus</h3>
+      <div class="gallery-grid">
+        <figure>
+          <img src="../photo/1.JPG" alt="Aperçu 1" loading="lazy" />
+          <figcaption>Parcours &amp; formation</figcaption>
+        </figure>
+        <figure>
+          <img src="../photo/2.jpg" alt="Aperçu 2" loading="lazy" />
+          <figcaption>Projets universitaires</figcaption>
+        </figure>
+        <figure>
+          <img src="../photo/3.jpg" alt="Aperçu 3" loading="lazy" />
+          <figcaption>Expérimentations</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <a href="../index.html#projets" class="footer-left-button">↩ Retour aux sections du portfolio</a>
+    <a href="../projetscolaire/index.html" class="footer-right-button">📂 Voir les projets universitaires</a>
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+      const cur = document.documentElement.dataset.theme === 'night' ? 'day' : 'night';
+      document.documentElement.dataset.theme = cur;
+      sessionStorage.setItem('theme', cur);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Metasploit">
+  <defs>
+    <linearGradient id="gmeta" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#gmeta)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4l8-4.6z"/>
+    <path d="M9.2 9.2h5.6"/>
+    <path d="M9.2 12h3.2"/>
+    <path d="M9.2 14.8h5.6"/>
+    <path d="M14.8 12l2.2 2.2"/>
+    <path d="M14.8 12l2.2-2.2"/>
+  </g>
+</svg>
