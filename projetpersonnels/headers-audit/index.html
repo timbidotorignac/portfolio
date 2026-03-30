@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit des en‑têtes HTTP</title>
+  <link rel="stylesheet" href="../../style.css?v=20260330t">
+
+  <script>
+    (function () {
+      const saved = sessionStorage.getItem('theme');
+      const startTheme = saved || 'day';
+      document.documentElement.dataset.theme = startTheme;
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="binary-wall" aria-hidden="true">
+    <div class="binary-line">0010011101100101101001100101010010100100101101100101101001100</div>
+    
+
+  <button id="theme-toggle" class="theme-toggle theme-toggle-floating" aria-label="Basculer le thème" title="Basculer le thème (Jour/Nuit)">
+  <span class="icon-sun" aria-hidden="true">☀️</span>
+  <span class="icon-moon" aria-hidden="true">🌙</span>
+</button>
+<div class="binary-line">111110011100010110010111100111000101100101111001110001011001</div>
+    <div class="binary-line">000110010111010100110101000011001011101010011010100001100101</div>
+    <div class="binary-line">111110001100000111000111111000110000011100011111100011000001</div>
+    <div class="binary-line">000000011111101111000000001111110111100000000111111011110000</div>
+  </div>
+
+  <main class="projects-school">
+    <section class="intro">
+      <h1 class="code-title"><span class="bracket">&lt;</span> Audit des en‑têtes HTTP <span class="bracket">&gt;</span></h1>
+      <p>Projet personnel : audit automatisé des en‑têtes de sécurité HTTP (inventaire &amp; recommandations).</p>
+    </section>
+
+    <div class="project-layout">
+      <article class="project-content">
+        <section class="project-card">
+              <h2>Contexte</h2>
+              <p>Le but est de contrôler rapidement la présence d’en‑têtes clés (HSTS, CSP, X‑Frame‑Options, etc.) et de produire un inventaire.</p>
+        <p>Approche orientée sécurité Web (durcissement et réduction de surface).</p>
+            </section>
+
+        <section class="project-card">
+              <h2>Objectifs</h2>
+              <ul>
+                <li>Automatiser l’inventaire d’en‑têtes sur une liste d’URLs</li>
+        <li>Détecter les manques fréquents</li>
+        <li>Produire une sortie exploitable (console / fichier)</li>
+              </ul>
+            </section>
+
+        <section class="project-card">
+              <h2>Démarche</h2>
+              <ol>
+                <li>Définition des en‑têtes attendus</li>
+        <li>Implémentation d’un scan simple (requêtes HTTP + parsing)</li>
+        <li>Sortie structurée et recommandations</li>
+              </ol>
+            </section>
+
+        <section class="project-card">
+              <h2>Compétences mobilisées</h2>
+              <ul>
+                <li>Sécurité Web</li>
+        <li>Automatisation (Python)</li>
+        <li>Analyse &amp; synthèse</li>
+              </ul>
+            </section>
+      </article>
+      <aside class="project-sidebar">
+
+      </aside>
+    </div>
+<div class="project-img-container">
+  <img src="../../images/zap.svg" alt="ZAP">
+</div>
+<div class="project-img-container">
+  <img src="../../images/shield.svg" alt="Sécurité">
+</div>
+  </div>
+</section>
+
+    
+<section class="project-card">
+  <h2>Supports visuels</h2>
+  <div class="project-gallery">
+    <div class="project-img-container">
+  <img src="../../proofs/headers-audit-grid.svg" alt="Grille PDF de lecture pour l'audit des en-têtes HTTP">
+</div>
+  </div>
+</section>
+
+    
+<section class="project-card">
+  <h2>Livrables</h2>
+  <ul>
+    <li><a class="doc-link" href="../../documents/headers-audit-grid.pdf" target="_blank" rel="noopener">PDF de synthèse — audit des en-têtes</a></li>
+  </ul>
+</section>
+    </div>
+
+    <footer class="page-footer">
+      <a href="../index.html" class="footer-left-button">↩ Retour aux projets personnels</a>
+      <a href="../../index.html" class="footer-right-button">🏠 Retour Portfolio</a>
+    </footer>
+  </main>
+
+  <script src="../../script.js?v=20260330t"></script>
+
+  <script>
+  (function () {
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', () => {
+      const cur = (document.documentElement.dataset.theme === 'night') ? 'day' : 'night';
+      document.documentElement.dataset.theme = cur;
+      sessionStorage.setItem('theme', cur);
+    });
+  })();
+</script>
+</body>
+</html>

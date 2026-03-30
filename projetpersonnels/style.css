@@ -1,0 +1,66 @@
+/*
+  Projets personnels — surcouche
+  (la base visuelle est héritée de ../projetscolaire/style.css)
+*/
+
+/* Ajustements légers de tonalité */
+.page-header .subtitle {
+  max-width: 80ch;
+}
+
+/* Détails / extraits */
+.card-details {
+  border-top: 1px solid var(--card-border);
+  padding-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.card-details summary {
+  cursor: pointer;
+  font-weight: 900;
+  color: var(--text);
+}
+
+.card-details summary::marker { color: var(--accent-2); }
+
+.card-details ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.code-block {
+  margin: 0;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  background: rgba(6,182,212,.06);
+  overflow: auto;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+html[data-theme="night"] .code-block {
+  background: rgba(124,58,237,.10);
+}
+
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-link {
+  text-decoration: none;
+  font-weight: 900;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  background: var(--bg);
+}
+
+.card-link:hover {
+  border-color: rgba(34,211,238,.30);
+}
